@@ -1,4 +1,4 @@
-import {ERROR,INFO,WARN} from './Level';
+import {ERROR,INFO,WARN,DEV} from './Level';
 import UserAgent from './UserAgent';
 
 export default class Logger{
@@ -45,6 +45,10 @@ export default class Logger{
         this.captureError(message, location.href, '', '', '',WARN);
     }
 
+    dev(message){
+        this.captureError(message, location.href, '', '', '',DEV);
+    }
+
     getParam(data){
         let defaultParams = {
             n:data.appname,
@@ -67,7 +71,7 @@ export default class Logger{
         if(url ==''){
             url = location.href;
         }
-        debugger;
+
         if (errorObject && errorObject.stack) {
             data.stack = errorObject.stack.toString();
         }

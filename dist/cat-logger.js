@@ -73,13 +73,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _Logger2 = _interopRequireDefault(_Logger);
 
+	exports.CatLogger = _Logger2['default'];
+
 	if (!window.CatLogger) {
-	    window.CatLogger = _Logger2['default'];
+	    window.CatLogger = exports['CatLogger'];
 	}
-
-	var _Logger3 = _interopRequireDefault(_Logger);
-
-	exports.CatLogger = _Logger3['default'];
 
 /***/ },
 /* 2 */
@@ -145,6 +143,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.captureError(message, location.href, '', '', '', _Level.WARN);
 	    };
 
+	    Logger.prototype.dev = function dev(message) {
+	        this.captureError(message, location.href, '', '', '', _Level.DEV);
+	    };
+
 	    Logger.prototype.getParam = function getParam(data) {
 	        var defaultParams = {
 	            n: data.appname,
@@ -168,7 +170,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (url == '') {
 	            url = location.href;
 	        }
-	        debugger;
+
 	        if (errorObject && errorObject.stack) {
 	            data.stack = errorObject.stack.toString();
 	        }

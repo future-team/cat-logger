@@ -1,9 +1,8 @@
 //export RadioGroup from './RadioGroup.js';
 
-import Logger from './Logger';
+export CatLogger from './Logger';
 
 if(!window.CatLogger){
-    window.CatLogger = Logger;
+    window.CatLogger = exports['CatLogger'];
 }
 
-export CatLogger from './Logger';
