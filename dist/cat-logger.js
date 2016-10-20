@@ -101,7 +101,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function Logger(opts) {
 	        _classCallCheck(this, Logger);
 
-	        this.url = opts.url || '//221.181.67.144/web-broker-service/api/js'; //'//webcatdot.dianping.com/web-broker-service/api/js';
+	        //测试环境  //192.168.226.45/web-broker-service/api/js
+	        var catUrl = (opts.isBeta ? '//192.168.226.45' : '//221.181.67.144') + '/web-broker-service/api/js';
+	        this.url = catUrl; // opts.url || '//221.181.67.144/web-broker-service/api/js';//'//webcatdot.dianping.com/web-broker-service/api/js';
 	        this.moduleName = opts.moduleName;
 
 	        //需绑定onerror事件

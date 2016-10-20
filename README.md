@@ -12,7 +12,8 @@ cat端可以设置报错阈值，到达阈值后会自动报警邮件通知。
     
     let logger = new CatLogger({
         moduleName:'cat-logger',//项目模块名
-        url:''                  //信息记录的服务器地址
+        url:''                  //信息记录的服务器地址,
+        isBeta:false   //默认false是否是beta环境，建议不要使用
     });
     
     logger.info('error message');   //info level

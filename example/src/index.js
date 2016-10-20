@@ -1,7 +1,8 @@
 import {CatLogger} from  '../../src/index.js';
 
 let logger = new CatLogger({
-    moduleName:'cat-logger'
+    moduleName:'cat-logger',
+    isBeta:true
 });
 
 logger.error('cat-logge errorr');
