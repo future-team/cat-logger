@@ -1,6 +1,6 @@
 {
   "name": "cat-logger",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "cat异常日志记录",
   "main": "lib/",
   "repository": "git@github.com:future-team/cat-logger.git",
